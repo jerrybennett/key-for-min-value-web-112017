@@ -7,12 +7,13 @@ def key_for_min_value(name_hash)
   end
   lowest = Float::INFINITY
 
-  name_hash.each do |k, v|
-    v.each_pair do |name, value|
-      if v < lowest
-        lowest = v
-        return k
-      end
+  name_hash.each_pair do |k, v|
+    v.each do |n, a|
+
+    end
+    if v < lowest
+      lowest = v
+      return k
     end
   end
 end
