@@ -11,9 +11,12 @@ def key_for_min_value(name_hash)
   return hashes[0][0][0]
 end
 
-lowest = 
-name_hash.each_pair do |key, value|
+lowest = Float::INFINITY
 
+name_hash.each_pair do |key, value|
+  if value < lowest
+    lowest = value
+  else
 end
 
 
