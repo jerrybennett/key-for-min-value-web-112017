@@ -8,10 +8,10 @@ def key_for_min_value(name_hash)
   else
     lowest = Float::INFINITY
 
-    name_hash.values.each.with_key do |v, k|
+    name_hash.values.each.with_index do |v, i|
       if v < lowest
         lowest = v
-        return k
+        return i
       end
     end
   end
