@@ -10,7 +10,7 @@ def key_for_min_value(name_hash)
   name_hash.each_pair do |k, v|
     if v < lowest
       lowest = name_hash[v]
-      return k
+      return name_hash[k]
     end
   end
 end
