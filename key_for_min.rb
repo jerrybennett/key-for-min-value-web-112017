@@ -11,6 +11,4 @@ def key_for_min_value(name_hash)
   return hashes[0][0][0]
 end
 
-name_hash.each do |i|
-
-  
+name_hash.values.each.with_index do |i|
