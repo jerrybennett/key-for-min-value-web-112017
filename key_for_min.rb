@@ -10,3 +10,5 @@ def key_for_min_value(name_hash)
   end
   return hashes[0][0][0]
 end
+
+name_hash.each do |i|
