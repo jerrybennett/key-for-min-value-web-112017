@@ -6,15 +6,14 @@ def key_for_min_value(name_hash)
   if name_hash.empty?
     return nil
   end
-    name_hash.each_with_index do |(key, value), i|
-      value = name_hash[key]
-      for i in name_hash.length
-        if value < lowest
-          lowest = value
-        end
-        if lowest == name_hash[value]
-          return key
-        end
+  name_hash.each_with_index do |(key, value), i|
+    value = name_hash[value]
+    for i in name_hash.length
+      if value < lowest
+        lowest = value
+      end
+      if lowest == name_hash[value]
+        return key
       end
     end
   end
