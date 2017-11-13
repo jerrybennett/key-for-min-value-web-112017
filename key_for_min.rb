@@ -5,18 +5,17 @@ def key_for_min_value(name_hash)
   lowest = Float::INFINITY
   if name_hash.empty?
     return nil
-  else
-    name_hash.each_with_index do |(key, value), i|
-      value = name_hash[value]
-      j = 0
-      while j < name_hash.length
-        if value < lowest
-          lowest = value
-          j += 1
-        end
-        if lowest == name_hash[value]
-          return key
-        end
+  end
+  name_hash.each_with_index do |(key, value), i|
+    value = name_hash[value]
+    j = 0
+    while j < name_hash.length
+      if value < lowest
+        lowest = value
+        j += 
+      end
+      if lowest == name_hash[value]
+        return key
       end
     end
   end
