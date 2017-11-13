@@ -11,4 +11,19 @@ def key_for_min_value(name_hash)
   return hashes[0][0][0]
 end
 
-name_hash.values.each.with_index do |i|
+lowest = 
+name_hash.each_pair do |key, value|
+
+end
+
+
+
+  max_value = 0  # or -Infinity if you have negative values
+  key_for_max_value = nil
+
+  hash.each_pair do | key, value |
+    if value > max_value
+      max_value = value
+      key_for_max_value = key
+    end
+  end
