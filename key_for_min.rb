@@ -3,8 +3,12 @@
 
 def key_for_min_value(name_hash)
   hashes = []
-  if block_given?
+  if name_hash.empty?
+    return nil
+  else
     hashes << name_hash.sort_by {|k, v| v}
   end
   return hashes[0][0][0]
 end
+
+lowest = 
