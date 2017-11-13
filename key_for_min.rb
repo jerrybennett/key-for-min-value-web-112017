@@ -8,9 +8,11 @@ def key_for_min_value(name_hash)
   end
   name_hash.each_with_index do |(key, value), i|
     value = name_hash[value]
-    for i in name_hash.length
+    j = 0
+    while j < name_hash.length
       if value < lowest
         lowest = value
+        j += 1
       end
       if lowest == name_hash[value]
         return key
