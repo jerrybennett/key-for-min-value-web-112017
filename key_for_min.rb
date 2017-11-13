@@ -10,7 +10,3 @@ def key_for_min_value(name_hash)
   end
   return hashes[0][0][0]
 end
-
-lowest = Float::INFINITY
-
-if name_hash.
