@@ -6,7 +6,12 @@ def key_for_min_value(name_hash)
   if name_hash.empty?
     return nil
   else
-    hashes << name_hash.sort_by {|k, v| v}
-  end
-  return hashes[0][0][0]
+    lowest = Float::INFINITY
+
+    name_hash.each_pair do |k, v|
+      if value < lowest
+        lowest = value
+        return k
+      end
+    end
 end
