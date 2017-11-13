@@ -8,9 +8,9 @@ def key_for_min_value(name_hash)
   end
   lowest = Float::INFINITY
   name_hash.each_pair do |k, v|
-    if v < lowest
-      lowest = name_hash[v]
-      return name_hash[k]
+    if k < lowest
+      lowest = v
+      return k
     end
   end
 end
