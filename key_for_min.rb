@@ -4,8 +4,6 @@
 def key_for_min_value(name_hash)
   lowest = Float::INFINITY
   if block_given?
-    return nil
-  end
   name_hash.each_with_index do |(key, value), i|
     value = name_hash[value]
     j = 0
@@ -18,6 +16,7 @@ def key_for_min_value(name_hash)
         return key
       end
     end
+  end
   end
 end
 
