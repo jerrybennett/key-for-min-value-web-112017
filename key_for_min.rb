@@ -3,7 +3,7 @@
 
 def key_for_min_value(name_hash)
   lowest = Float::INFINITY
-  if name_hash.empty?
+  if block_given?
     return nil
   end
   name_hash.each_with_index do |(key, value), i|
@@ -12,7 +12,7 @@ def key_for_min_value(name_hash)
     while j < name_hash.length
       if value < lowest
         lowest = value
-        j += 
+        j +=
       end
       if lowest == name_hash[value]
         return key
